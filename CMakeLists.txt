@@ -141,7 +141,7 @@ if(USE_NEURAL_CALIBRATION)
 	if(OpenCV_FOUND)
 		include_directories(${OpenCV_INCLUDE_DIRS})
 		add_definitions(-D NEURAL_CALIBRATION)
-		set (OPTIONAL_SRCS ${OPTIONAL_SRCS} src/app/gui/neurowidget.cpp src/app/plugins/plugin_neuralcolorcalib.cpp)
+		set (OPTIONAL_SRCS ${OPTIONAL_SRCS} src/shared/fard/fard_detector.cpp src/app/gui/neurowidget.cpp src/app/plugins/plugin_neuralcolorcalib.cpp)
 		set (OPTIONAL_HEADERS ${OPTIONAL_HEADERS} src/app/gui/neurowidget.h)
 		set (OPTIONAL_UI_SRCS ${OPTIONAL_UI_SRCS} src/app/gui/neurowidget.ui)
 		message(STATUS "OpenCV 2 found => Neural Calibration available")
@@ -224,6 +224,7 @@ set (SRCS
 	src/app/plugins/plugin_dvr.cpp
 	src/app/plugins/plugin_distribute.cpp
 	src/app/plugins/visionplugin.cpp
+	src/app/plugins/plugin_detect_fard_robots.cpp
 
 	src/app/stacks/multistack_robocup_ssl.cpp
 	src/app/stacks/multivisionstack.cpp
@@ -245,12 +246,14 @@ qt4_wrap_cpp (MOC_SRCS
 	src/app/gui/videowidget.h
 	src/app/gui/jog_dial.h
 	src/shared/util/lut3d.h
+	src/shared/fard/fard_detector.h
 
 	src/app/plugins/plugin_dvr.h
 	src/app/plugins/plugin_publishgeometry.h
 	src/app/plugins/plugin_legacypublishgeometry.h
 	src/app/plugins/visionplugin.h
 	src/app/plugins/plugin_colorcalib.h
+	src/app/plugins/plugin_detect_fard_robots.h
 
 	src/app/stacks/multistack_robocup_ssl.h
 

@@ -34,6 +34,7 @@
 #include "plugin_find_blobs.h"
 #include "plugin_detect_balls.h"
 #include "plugin_detect_robots.h"
+#include "plugin_detect_fard_robots.h"
 #include "plugin_sslnetworkoutput.h"
 #include "plugin_publishgeometry.h"
 #include "plugin_legacysslnetworkoutput.h"

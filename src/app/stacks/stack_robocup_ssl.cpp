@@ -76,6 +76,8 @@ StackRoboCupSSL::StackRoboCupSSL(
 
   stack.push_back(new PluginDetectRobots(_fb,lut_yuv,*camera_parameters,*global_field,global_team_selector_blue,global_team_selector_yellow, global_team_settings));
 
+  stack.push_back(new PluginDetectFARDRobots(_fb,lut_yuv,*camera_parameters,*global_field,global_team_selector_blue,global_team_selector_yellow, global_team_settings));
+
   stack.push_back(new PluginDetectBalls(_fb,lut_yuv,*camera_parameters,*global_field,global_ball_settings));
 
   stack.push_back(new PluginSSLNetworkOutput(
